@@ -1,0 +1,7 @@
+streamlit>=1.46
+pillow
+networkx
+pandas
+plotly
+langchain-ollama
+langchain-core

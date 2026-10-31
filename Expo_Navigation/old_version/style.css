@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+:root {
+  --bg: #F7F5F2;
+  --primary: #6C55D6;
+  --primary-hover: #5B45C4;
+  --primary-soft: #EDE9FB;
+  --primary-border: #D9D2F5;
+  --text: #1B1B2F;
+  --muted: #6E6E80;
+  --radius: 12px;
+}
+
+/* ---------- Streamlit reset ---------- */
+header[data-testid="stHeader"],
+footer,
+#MainMenu { display: none !important; }
+
+.stApp {
+  background: var(--bg);
+  font-family: 'Tajawal', sans-serif;
+}
+
+.block-container {
+  max-width: 430px !important;       /* عرض جوال */
+  min-height: 100vh;
+  padding: 1.2rem 1.4rem 2rem !important;
+  margin: 0 auto;
+}
+
+/* ---------- Top bar (اللغة + الثيم) ---------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pill-lang {
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 7px 26px;
+  border-radius: 999px;
+}
+
+.circle-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Welcome / Splash ---------- */
+.page-welcome {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/* دوائر الخلفية المتحدة المركز */
+.page-welcome::before,
+.page-welcome::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(108, 85, 214, 0.10);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.page-welcome::before { width: 340px; height: 340px; }
+.page-welcome::after  { width: 520px; height: 520px; }
+
+.container-narrow {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.brand h1 {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #1E1B4B;
+  margin: 1.5rem 0 0.5rem;
+  padding: 0;
+}
+
+.page-welcome .title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 1.2rem 0 0.6rem;
+  padding: 0;
+}
+
+.page-welcome .subtitle {
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* ---------- Dots (مؤشر الصفحات) ---------- */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 1.4rem 0 1rem;
+}
+.dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D8D4E8;
+}
+.dots span.active {
+  width: 22px;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
+/* ---------- Primary button ---------- */
+div[data-testid="stButton"] > button {
+  width: 100%;
+  height: 46px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Tajawal', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background .2s ease, transform .1s ease;
+}
+div[data-testid="stButton"] > button:hover {
+  background: var(--primary-hover);
+  color: #fff;
+}
+div[data-testid="stButton"] > button:active { transform: scale(0.98); }
+div[data-testid="stButton"] > button:focus:not(:active) {
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(108, 85, 214, 0.25);
+}
+
+/* ---------- Skip link ("تخطي") ---------- */
+.skip {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ---------- RTL للعربي ---------- */
+[dir="rtl"] .page-welcome,
+[dir="rtl"] .topbar { direction: rtl; }
+/* ---------- الشعار ---------- */
+.logo { height: 38px; width: auto; display: block; margin: 0 auto; }
+.logo-lg { height: 64px; }
+.logo-text, .logo-text-lg {
+  font-weight: 800; letter-spacing: 3px; color: #1E1B4B;
+  text-align: center; font-size: 30px;
+}
+.ob-head { text-align: center; margin: -0.2rem 0 1rem; }
+
+/* ---------- Splash ---------- */
+.page-splash {
+  position: relative; text-align: center;
+  padding: 9rem 0 6rem;
+}
+.page-splash::before, .page-splash::after {
+  content: ""; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(108,85,214,.10); border-radius: 50%;
+  pointer-events: none;
+}
+.page-splash::before { width: 360px; height: 360px; }
+.page-splash::after  { width: 540px; height: 540px; }
+.tagline { font-size: 11px; color: var(--muted); margin-top: 1rem; }
+.bottom-gap { height: 3rem; }
+
+/* زر "ابدأ الاستكشاف ←" في الـ Splash (نص بدون خلفية) */
+.st-key-splash_start button {
+  background: transparent !important; color: var(--primary) !important;
+  height: auto; font-size: 12px; font-weight: 500;
+}
+
+/* زر تخطي */
+.st-key-skip button {
+  background: transparent !important; color: var(--muted) !important;
+  height: auto; font-size: 12px; font-weight: 500; margin-top: .3rem;
+}
+
+/* ---------- Onboarding عام ---------- */
+.ob { text-align: center; }
+.ob-title { font-size: 18px; font-weight: 800; color: var(--text); margin: 1.4rem 0 .5rem; padding: 0; }
+.ob-sub   { font-size: 12.5px; line-height: 1.8; color: var(--muted); max-width: 300px; margin: 0 auto; }
+
+/* ---------- البحث + الفلاتر ---------- */
+.search {
+  display: flex; align-items: center; gap: 8px; background: #fff;
+  border-radius: 999px; padding: 10px 16px; font-size: 12px; color: var(--muted);
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+.chips { display: flex; gap: 8px; justify-content: center; margin: .8rem 0 1rem; }
+.chip {
+  background: #fff; color: var(--text); font-size: 11px;
+  padding: 5px 16px; border-radius: 999px; box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+.chip.active { background: var(--primary); color: #fff; }
+
+/* ---------- الكروت ---------- */
+.cards-stack { position: relative; height: 190px; }
+.card {
+  position: absolute; background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+.card img, .photo-ph { width: 100%; height: 130px; object-fit: cover; display: block; }
+.photo-ph { background: linear-gradient(135deg, #cfc8f0, #8f80e0); }
+.card-cap { padding: 8px 10px; text-align: right; font-size: 12px; }
+.card-cap small { display: block; color: var(--muted); font-size: 10px; }
+.card-back  { width: 48%; top: 22px; left: 0; opacity: .95; }
+.card-front { width: 62%; top: 0; right: 0; z-index: 2; }
+
+/* ---------- الخريطة ---------- */
+.map-box {
+  position: relative; height: 230px; border-radius: 18px;
+  background: #E9E5F7 center/cover no-repeat;
+  box-shadow: 0 6px 18px rgba(0,0,0,.10);
+}
+.map-label {
+  position: absolute; top: 28px; left: 50%; transform: translateX(-50%);
+  background: #fff; font-size: 11px; padding: 5px 14px; border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.map-pin { position: absolute; top: 62px; left: 50%; transform: translateX(-50%); font-size: 26px; }
+.map-thumb {
+  position: absolute; bottom: -10px; left: -10px; width: 42%;
+  border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px rgba(0,0,0,.2);
+}
+.map-thumb img, .map-thumb .photo-ph { height: 110px; }
+
+/* ---------- المحادثة ---------- */
+.chat {
+  background: #fff; border-radius: 18px; padding: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.10); text-align: right;
+}
+.chat-head { display: flex; align-items: center; gap: 8px; font-size: 12px; margin-bottom: 12px; }
+.avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--primary-soft);
+          display: inline-flex; align-items: center; justify-content: center; }
+.bubble { font-size: 11px; padding: 10px 12px; border-radius: 10px; margin: 8px 0; line-height: 1.7; }
+.bubble-user { background: #fff; border: 1px solid #EEE; width: 85%; }
+.bubble-bot  { background: #F4F2FB; border: 1px solid var(--primary-border); }
+.chat-card {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  border: 1px solid #EEE; border-radius: 12px; padding: 10px; margin-top: 10px;
+}
+.chat-card-text { display: flex; flex-direction: column; gap: 4px; font-size: 12px; }
+.chat-card-text small { color: var(--muted); font-size: 10px; }
+.mini-btn {
+  border: 1px solid var(--primary-border); color: var(--primary);
+  font-size: 10px; padding: 5px 14px; border-radius: 8px; margin-top: 6px; width: fit-content;
+}
+.chat-card-img { width: 42%; border-radius: 10px; overflow: hidden; }
+.chat-card-img img, .chat-card-img .photo-ph { height: 70px; }
+.ob[dir="ltr"] .chat,
+.ob[dir="ltr"] .card-cap { text-align: left; }

@@ -1,0 +1,29 @@
+﻿location_id,pavilion_id,pavilion_name,location_name,location_type,country,parent_zone,capacity,latitude,longitude
+MC1,TP01,Technology Pavilion,Main Corridor 1,main_corridor,N/A,Technology Pavilion,200,24,46.0001
+MC2,TP01,Technology Pavilion,Main Corridor 2,main_corridor,N/A,Technology Pavilion,200,24,46.0002
+MC3,TP01,Technology Pavilion,Main Corridor 3,main_corridor,N/A,Technology Pavilion,200,24,46.0003
+MC4,TP01,Technology Pavilion,Main Corridor 4,main_corridor,N/A,Technology Pavilion,200,24,46.0004
+SA_C1,SA01,Saudi Arabia Pavilion,Saudi Corridor 1,corridor,Saudi Arabia,Saudi Zone,100,24.0002,46.0001
+SA_C2,SA01,Saudi Arabia Pavilion,Saudi Corridor 2,corridor,Saudi Arabia,Saudi Zone,100,24.0003,46.0001
+SA_C3,SA01,Saudi Arabia Pavilion,Saudi Corridor 3,corridor,Saudi Arabia,Saudi Zone,100,24.0004,46.0001
+SA_C4,SA01,Saudi Arabia Pavilion,Saudi Corridor 4,corridor,Saudi Arabia,Saudi Zone,100,24.0005,46.0001
+JP_C1,JP01,Japan Pavilion,Japan Corridor 1,corridor,Japan,Japan Zone,100,24.0002,46.0002
+JP_C2,JP01,Japan Pavilion,Japan Corridor 2,corridor,Japan,Japan Zone,100,24.0003,46.0002
+JP_C3,JP01,Japan Pavilion,Japan Corridor 3,corridor,Japan,Japan Zone,100,24.0004,46.0002
+JP_C4,JP01,Japan Pavilion,Japan Corridor 4,corridor,Japan,Japan Zone,100,24.0005,46.0002
+FR_C1,FR01,France Pavilion,France Corridor 1,corridor,France,France Zone,100,24.0002,46.0003
+FR_C2,FR01,France Pavilion,France Corridor 2,corridor,France,France Zone,100,24.0003,46.0003
+FR_C3,FR01,France Pavilion,France Corridor 3,corridor,France,France Zone,100,24.0004,46.0003
+FR_C4,FR01,France Pavilion,France Corridor 4,corridor,France,France Zone,100,24.0005,46.0003
+SA_ENT,SA01,Saudi Arabia Pavilion,Saudi Entrance,entrance,Saudi Arabia,Saudi Zone,50,24.0001,46.0001
+SA_EXT,SA01,Saudi Arabia Pavilion,Saudi Exit,exit,Saudi Arabia,Saudi Zone,50,24.0006,46.0001
+JP_ENT,JP01,Japan Pavilion,Japan Entrance,entrance,Japan,Japan Zone,50,24.0001,46.0002
+JP_EXT,JP01,Japan Pavilion,Japan Exit,exit,Japan,Japan Zone,50,24.0006,46.0002
+FR_ENT,FR01,France Pavilion,France Entrance,entrance,France,France Zone,50,24.0001,46.0003
+FR_EXT,FR01,France Pavilion,France Exit,exit,France,France Zone,50,24.0006,46.0003
+TP_ENT,TP01,Technology Pavilion,Pavilion Entrance,entrance,N/A,Technology Pavilion,100,24,46
+TP_EXT,TP01,Technology Pavilion,Pavilion Exit,exit,N/A,Technology Pavilion,100,24,46.0005
+WC1,TP01,Technology Pavilion,Restroom 1,restroom,N/A,Technology Pavilion,30,24.0001,46.0004
+WS1,TP01,Technology Pavilion,Water Station 1,water_station,N/A,Technology Pavilion,20,23.9999,46.0003
+ID1,TP01,Technology Pavilion,Information Desk,information_desk,N/A,Technology Pavilion,10,24.0001,46
+FA1,TP01,Technology Pavilion,First Aid Point,first_aid,N/A,Technology Pavilion,10,23.9999,4
